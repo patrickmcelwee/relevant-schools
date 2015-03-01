@@ -57,7 +57,7 @@
 
 
         (function init(){
-          options.queryOptions = options.queryOptions ? options.queryOptions : 'all';
+          options.queryOptions = options.queryOptions ? options.queryOptions : '';
           options.pageLength = options.pageLength ? options.pageLength : 10;
         })();
 
@@ -256,17 +256,17 @@
           createSearchContext: function(options) {
             return new SearchContext(options, $q, $http);
           },
-          getDocument: function(uri, options) {
+          getDocument: function(iri, options) {
             if (options === undefined || options === null) {
               options = {};
             }
             angular.extend(options, {
-              format: 'json',
-              uri: uri
+              iri: iri
             });
             return $http.get(
-              '/v1/documents',
+              '/v1/graphs/things',
               {
+                headers: { 'Accept': undefined },
                 params: options
               });
           },

@@ -1,5 +1,3 @@
 <div class="row detail">
-  <!-- display JSON data -->
-  <json-explorer json-data="{{model.detail}}"></json-explorer>
-
+  <div ng-bind-html="renderHtml(model.detail)"></div>
 </div>
