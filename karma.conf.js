@@ -23,7 +23,7 @@ module.exports = function(config) {
       'ui/app/bower_components/ckeditor/ckeditor.js',
       'ui/app/bower_components/ng-ckeditor/ng-ckeditor.js',
       'ui/app/bower_components/mlFacets/dist/ml-facets.js',
-      'ui/app/bower_components/ng-json-explorer/src/gd-ui-jsonexplorer.js',
+      'ui/app/bower_components/ng-json-explorer/src/angular-json-explorer.js',
 
       // App under test
       'ui/app/app.js',

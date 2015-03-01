@@ -1,7 +1,7 @@
 
 angular.module('sample', [
   'ngRoute', 'ngCkeditor', 'sample.user', 'sample.search', 'sample.common', 'sample.detail',
-  'ui.bootstrap', 'gd.ui.jsonexplorer', 'sample.create'
+  'ui.bootstrap', 'ngJsonExplorer', 'sample.create'
 ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
