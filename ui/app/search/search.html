@@ -1,9 +1,30 @@
-<h1>Relevant Publications</h1>
-<div class="row">
-  <ul ng-repeat="(iri, citation) in model.search">
-    <li ng-bind-html="renderHtml(citation)"></li>
-  </ul>
+<div class="col-xs-7 pull-left">
+  <h1>Publications</h1>
+  <div class="row">
+    <ul ng-repeat="(iri, citation) in model.search.publications">
+      <li ng-bind-html="renderHtml(citation)"></li>
+    </ul>
+  </div>
+</div>
+<div class="col-xs-4 pull-right">
+  <h1>Institutions</h1>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Institution</th>
+          <th># of Experts Trained</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="institution in model.search.institutions | orderBy:'score':true">
+        <tr>
+          <td>{{institution.label}}</td>
+          <td>{{institution.score}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
   <!--<results result-list="model.search.results" total="model.search.total" current-page="model.currentPage"-->
            <!--page-length="model.search['page-length']" start="model.search.start"-->
            <!--paginate="pageChanged(page)" class="col-md-9 results"/>-->
-</div>
