@@ -7299,6 +7299,7 @@ td.visible-print {
   background-repeat: no-repeat;
   background-position-y: 7px;
   padding-left: 36px;
+  background-size: 40px;
 }
 #footer {
   border-top: 1px solid;
